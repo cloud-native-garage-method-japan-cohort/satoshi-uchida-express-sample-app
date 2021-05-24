@@ -6,7 +6,6 @@ metadata:
     openshift.io/host.generated: "true"
   name: andreas-kavountzis-pipeline-from-scratch
 spec:
-  host: <HOST>
   tls:
     termination: edge
   to:
