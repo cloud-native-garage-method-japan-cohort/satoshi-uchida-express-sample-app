@@ -7,10 +7,6 @@ resources:
   - deployment.yaml
   - service.yaml
   - route.yaml
-images:
-  - name: andreas-kavountzis-pipeline-from-scratch
-    newName: andreask/andreas-kavountzis-pipeline-from-scratch
-    newTag: "v0.1.0"
 patches:
   - path: host_patch.json
     target:
