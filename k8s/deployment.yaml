@@ -44,7 +44,7 @@ spec:
             timeoutSeconds: 1
           name: andreas-kavountzis-pipeline-from-scratch
           ports:
-            - containerPort: 8080
+            - containerPort: 3000
               name: http
               protocol: TCP
           readinessProbe:
