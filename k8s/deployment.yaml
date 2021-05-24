@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app.openshift.io/vcs-ref: 8d74d4b37e28342b6ca6f9a2b65882928ba8525c
+    app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
     app.openshift.io/vcs-uri: https://github.com/upslopeio/express-sample-app
   labels:
     app: andreas-kavountzis-pipeline-from-scratch
