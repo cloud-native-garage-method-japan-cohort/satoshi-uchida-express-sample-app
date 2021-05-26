@@ -5,25 +5,25 @@ metadata:
     app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
     app.openshift.io/vcs-uri: https://github.com/upslopeio/express-sample-app
   labels:
-    app: andreas-kavountzis-pipeline-from-scratch
-    app.kubernetes.io/instance: andreas-kavountzis-pipeline-from-scratch
-    app.kubernetes.io/name: andreas-kavountzis-pipeline-from-scratch
+    app: andreas-kavountzis-live-pfs
+    app.kubernetes.io/instance: andreas-kavountzis-live-pfs
+    app.kubernetes.io/name: andreas-kavountzis-live-pfs
     app.openshift.io/runtime: js
-  name: andreas-kavountzis-pipeline-from-scratch
+  name: andreas-kavountzis-live-pfs
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      app.kubernetes.io/instance: andreas-kavountzis-pipeline-from-scratch
-      app.kubernetes.io/name: andreas-kavountzis-pipeline-from-scratch
+      app.kubernetes.io/instance: andreas-kavountzis-live-pfs
+      app.kubernetes.io/name: andreas-kavountzis-live-pfs
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app.kubernetes.io/instance: andreas-kavountzis-pipeline-from-scratch
-        app.kubernetes.io/name: andreas-kavountzis-pipeline-from-scratch
+        app.kubernetes.io/instance: andreas-kavountzis-live-pfs
+        app.kubernetes.io/name: andreas-kavountzis-live-pfs
     spec:
       containers:
         - env:
@@ -42,7 +42,7 @@ spec:
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 1
-          name: andreas-kavountzis-pipeline-from-scratch
+          name: andreas-kavountzis-live-pfs
           ports:
             - containerPort: 3000
               name: http
