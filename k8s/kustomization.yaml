@@ -5,6 +5,6 @@ resources:
   - service.yaml
   - route.yaml
 commonLabels:
-  app: my-app-namespace
-  app.kubernetes.io/instance: my-app-namespace
-  app.kubernetes.io/name: my-app-name
+  app: express-sample-app
+  app.kubernetes.io/instance: express-sample-app-instance
+  app.kubernetes.io/name: express-sample-app

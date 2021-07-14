@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: andreas-kavountzis-live-pfs
-    app.kubernetes.io/instance: andreas-kavountzis-live-pfs
-    app.kubernetes.io/name: andreas-kavountzis-live-pfs
-  name: andreas-kavountzis-live-pfs
+    app: express-sample-app
+    app.kubernetes.io/instance: express-sample-app-instance
+    app.kubernetes.io/name: express-sample-app
+  name: express-sample-app
 spec:
   ports:
     - name: http
@@ -13,7 +13,7 @@ spec:
       protocol: TCP
       targetPort: 3000
   selector:
-    app.kubernetes.io/instance: andreas-kavountzis-live-pfs
-    app.kubernetes.io/name: andreas-kavountzis-live-pfs
+    app.kubernetes.io/instance: express-sample-app-instance
+    app.kubernetes.io/name: express-sample-app
   sessionAffinity: None
   type: ClusterIP

@@ -4,12 +4,12 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-options: Validate=false
     openshift.io/host.generated: "true"
-  name: akpfs
+  name: express-sample-app
 spec:
   tls:
     termination: edge
   to:
     kind: Service
-    name: andreas-kavountzis-live-pfs
+    name: express-sample-app
     weight: 100
   wildcardPolicy: None
