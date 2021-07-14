@@ -9,13 +9,13 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Executes commands
-RUN npm install
+RUN npm ci
 
 # Copies files from source to destination, in this case the root of the build context
 # into the root of the WORKDIR
 COPY . .
 
-# Exposes port 3000 on the container to the outside world
+# Document that this container exposes something on port 3000
 EXPOSE 3000
 
 # Command to use for starting the application
