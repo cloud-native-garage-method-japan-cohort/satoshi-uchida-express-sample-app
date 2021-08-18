@@ -1,9 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
-    app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
-    app.openshift.io/vcs-uri: https://github.com/upslopeio/express-sample-app
   labels:
     app: express-sample-app
     app.kubernetes.io/instance: express-sample-app-instance
@@ -20,7 +17,6 @@ spec:
       app.kubernetes.io/name: express-sample-app
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app.kubernetes.io/instance: express-sample-app-instance
         app.kubernetes.io/name: express-sample-app
@@ -31,7 +27,7 @@ spec:
             - name: PROTOCOLS
             - name: LOG_LEVEL
               value: debug
-          image: quay.io/jeffdean/express-sample-app
+          image: quay.io/upslope/express-sample-app
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3
