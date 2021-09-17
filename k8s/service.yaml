@@ -1,19 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    app: express-sample-app
-    app.kubernetes.io/instance: express-sample-app-instance
-    app.kubernetes.io/name: express-sample-app
   name: express-sample-app
 spec:
-  ports:
-    - name: http
-      port: 80
-      protocol: TCP
-      targetPort: 3000
-  selector:
-    app.kubernetes.io/instance: express-sample-app-instance
-    app.kubernetes.io/name: express-sample-app
-  sessionAffinity: None
   type: ClusterIP
+  selector:
+    app.kubernetes.io/instance: app-instance
+    app.kubernetes.io/name: app
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 3000
+  sessionAffinity: None
