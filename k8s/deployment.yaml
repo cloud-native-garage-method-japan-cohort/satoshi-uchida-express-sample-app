@@ -20,7 +20,8 @@ spec:
       schedulerName: default-scheduler
       containers:
       - name: express-sample-app
-        image: quay.io/upslopeio/express-sample-app:d90c742ee626048c4d1e2032eb836255e4036561
+        #image: quay.io/upslopeio/express-sample-app:d90c742ee626048c4d1e2032eb836255e4036561
+        image: express-sample-app # override kustomize command.
         ports:
         - name: http
           protocol: TCP
